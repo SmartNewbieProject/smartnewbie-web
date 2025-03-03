@@ -1,0 +1,36 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/global.css';
+import Home from '@pages/home';
+import 'swiper/css';
+import 'swiper/css/effect-cube';
+import 'swiper/css/pagination';
+import { Footer, Header } from '@features/layout';
+import Support from '@features/support';
+---
+
+<Layout title="스마트뉴비" description="작은 아이디어를 실현하는 공간">
+	<Header client:load />
+	<Home.TopContent />
+	<Support client:load />
+	<Home.Portfolios client:load />
+	<Home.Contact />
+	<Footer />
+</Layout>
+
+<script>
+	if (window.location.hash) {
+		const targetId = window.location.hash.substring(1); // '#' 제거
+		const targetElement = document.getElementById(targetId);
+		if (targetElement) {
+			const headerOffset = 100; // 고정 헤더 높이(px)
+			const elementPosition = targetElement.getBoundingClientRect().top;
+			const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+			window.scrollTo({
+				top: offsetPosition,
+				behavior: 'smooth'
+			});
+		}
+	}
+</script>
