@@ -1,5 +1,25 @@
 import { Icons } from "@shared/ui";
 import type { PanelMetadata } from "@features/portfolios";
+import { cn } from "@/lib/utils";
+
+interface SlideImageProps {
+  src: string;
+  className?: string;
+  desc?: string;
+}
+
+const SlideImage = ({ src, className, desc }: SlideImageProps) => (
+  <div className="w-full flex flex-col items-center gap-y-2">
+    <img 
+      src={src} 
+      className={cn(["rounded-lg object-fit max-h-[540px]", className])}
+      onClick={e => e.preventDefault()} 
+    />
+    {desc && (
+      <p className="text-center text-sm text-gray-500 mt-3">{desc}</p>
+    )}
+  </div>
+);
 
 const easyJoin: PanelMetadata = {
 	title: (
@@ -23,39 +43,17 @@ const easyJoin: PanelMetadata = {
 	features: ['본인인증(Nice)', '기업/사용자용 랜딩', '비대면 전자계약 기능', '대용량 이미지 처리', '전자계약 문서 관리', '계약 인증서 자동 생성', '전자계약용 파일업로드 용 모바일앱 개발'],
 	rules: ['기능명세', '서비스 기획', '개발', '프로젝트 관리'],
 	slides: [
-		<div className="w-full flex justify-center">
-		<img src="/easyjoin/bus-home.png" className="rounded-lg object-fit max-h-[540px]" onClick={e => e.preventDefault()} />
-</div>,
-		<div className="w-full flex justify-center">
-			<img src="/easyjoin/template.png" className="rounded-lg object-fit max-h-[540px]" onClick={e => e.preventDefault()} />
-		</div>,
-		<div className="w-full flex justify-center">
-			<img src="/easyjoin/template-w.png" className="rounded-lg object-fit max-h-[540px]" onClick={e => e.preventDefault()} />
-		</div>,
-		<div className="w-full flex justify-center">
-			<img src="/easyjoin/drawing.png" className="rounded-lg object-fit max-h-[540px]" onClick={e => e.preventDefault()} />
-		</div>,
-		<div className="w-full flex justify-center">
-			<img src="/easyjoin/comp-docs.png" className="rounded-lg object-fit max-h-[540px]" onClick={e => e.preventDefault()} />
-		</div>,
-		<div className="w-full flex justify-center">
-			<img src="/easyjoin/progress.png" className="rounded-lg object-fit max-h-[540px]" onClick={e => e.preventDefault()} />
-		</div>,
-		<div className="w-full flex justify-center">
-			<img src="/easyjoin/sign.png" className="rounded-lg object-fit max-h-[540px]" onClick={e => e.preventDefault()} />
-		</div>,
-			<div className="w-full flex justify-center">
-				<img src="/easyjoin/sign-management.png" className="rounded-lg object-fit max-h-[540px]" onClick={e => e.preventDefault()} />
-		</div>,
-			<div className="w-full flex justify-center">
-					<img src="/easyjoin/client-system.png" className="rounded-lg object-fit max-h-[540px]" onClick={e => e.preventDefault()} />
-			</div>,
-				<div className="w-full flex justify-center">
-					<img src="/easyjoin/my-info.png" className="rounded-lg object-fit max-h-[540px]" onClick={e => e.preventDefault()} />
-				</div>,
-				<div className="w-full flex justify-center">
-					<img src="/easyjoin/required-attachment.png" className="rounded-lg object-fit max-h-[540px]" onClick={e => e.preventDefault()} />
-				</div>,
+		<SlideImage src="/easyjoin/bus-home.png" desc="PC 메인페이지" />,
+		<SlideImage src="/easyjoin/template.png" desc="기업 사용자 - 전자계약 템플릿 문서함" />,
+		<SlideImage src="/easyjoin/template-w.png" desc="기업 사용자 - 전자계약 템플릿 작성화면" />,
+		<SlideImage src="/easyjoin/drawing.png" desc="전자계약 - 서명 그리기 기능" />,
+		<SlideImage src="/easyjoin/comp-docs.png" desc="기업 사용자 - 계약 완료문서함 관리" />,
+		<SlideImage src="/easyjoin/progress.png" desc="계약 사용자 - 계악 중 화면" />,
+		<SlideImage src="/easyjoin/sign.png" desc="계약 사용자 - 직인 부여" />,
+		<SlideImage src="/easyjoin/sign-management.png" desc="기업 사용자 - 직인 관리" />,
+		<SlideImage src="/easyjoin/client-system.png" desc="계약 사용자 - 계약자 전용 화면" />,
+		<SlideImage src="/easyjoin/my-info.png" desc="기업 사용자 - 내 정보 관리" />,
+		<SlideImage src="/easyjoin/required-attachment.png" desc="전자계약 - 신분증 등 필수파일 업로드 화면" />
 	],
 };
 
@@ -81,21 +79,11 @@ const treedStudio: PanelMetadata = {
 	features: ['모두싸인 연동(전자계약)', '결제(NicePay)', '캔버스 기반 이미지 탐색', '어드민', '회원 관리', 'RBAC 권한 관리', '대용량 이미지 압축', '실시간 상태 변경(ws)'],
 	rules: ['개발', '자동화 서버 운영', '프로젝트 관리'],
 	slides: [
-		<div className="w-full flex justify-center">
-			<img src="/treed/treed-admin-user-management.png" className="rounded-lg object-fit max-h-[540px]" onClick={e => e.preventDefault()} />
-		</div>,
-		<div className="w-full flex justify-center">
-			<img src="/treed/treed-pics-valid.png" className="rounded-lg object-fit max-h-[540px]" onClick={e => e.preventDefault()} />
-		</div>,
-		<div className="w-full flex justify-center">
-			<img src="/treed/treed-collection.png" className="rounded-lg object-fit max-h-[540px]" onClick={e => e.preventDefault()} />
-		</div>,
-		<div className="w-full flex justify-center">
-			<img src="/treed/treed-contract.png" className="rounded-lg object-fit max-h-[540px]" onClick={e => e.preventDefault()} />
-		</div>,
-		<div className="w-full flex justify-center">
-			<img src="/treed/treed-inspect.png" className="rounded-lg object-fit max-h-[540px]" onClick={e => e.preventDefault()} />
-		</div>,
+		<SlideImage src="/treed/treed-admin-user-management.png" desc="관리자 - 회원 관리" />,
+		<SlideImage src="/treed/treed-pics-valid.png" desc="관리자 - 회원 데이터 검수" />,
+		<SlideImage src="/treed/treed-collection.png" desc="관리자 - 회원 데이터 수집 현황" />,
+		<SlideImage src="/treed/treed-contract.png" desc="관리자 - 회원 계약 관리" />,
+		<SlideImage src="/treed/treed-inspect.png" desc="관리자 - 회원 제출 데이터 실시간 검수" />
 	],
 };
 
@@ -115,15 +103,9 @@ const fsComEsg: PanelMetadata = {
 	features: ['전자결제(후원)', '공지사항', '챗봇(GPT 3.5 기반)', '반응형 지원', '어드민'],
 	rules: ['기능명세', '서비스 기획', '디자인', '개발'],
 	slides: [
-			<div>
-				<img src="/esg-main.png" className="rounded-lg object-fit" onClick={e => e.preventDefault()} />
-	</div>,
-	<div className="w-full flex justify-center">
-	<img src="/esg-iphone.gif" className="rounded-lg object-fit max-h-[540px]" onClick={e => e.preventDefault()} />
-	</div>,
-	<div className="w-full flex justify-center">
-	<img src="/education.png" className="rounded-lg object-fit max-h-[540px]" onClick={e => e.preventDefault()} />
-	</div>
+		<SlideImage src="/esg-main.png" className="rounded-lg object-fit" desc="메인 화면" />,
+		<SlideImage src="/esg-iphone.gif" desc="모바일 화면" />,
+		<SlideImage src="/education.png" desc="교육 화면" />
 	],
 };
 
@@ -150,22 +132,12 @@ const internMate: PanelMetadata = {
 	features: ['AOS/IOS 스토어 출시', '추천 매칭 알고리즘', '기업 사용자 기능', '일반 사용자 기능', '마이페이지', '내 커리어 관리'],
 	rules: ['자사 솔루션', '기능명세', '서비스 기획', '디자인', '개발'],
 	slides: [
-		<div className="w-full flex justify-center">
-			<img src="/internmate/im-home.png" className="rounded-lg object-fit max-h-[540px]" onClick={e => e.preventDefault()} />
-		</div>,
-		<div className="w-full flex justify-center">
-			<img src="/internmate/im-my-career.gif" className="rounded-lg object-fit max-h-[540px]" onClick={e => e.preventDefault()} />
-		</div>,
-		<div className="w-full flex justify-center">
-			<img src="/internmate/im-recruitment-details.gif" className="rounded-lg object-fit max-h-[540px]" onClick={e => e.preventDefault()} />
-		</div>,
-		<div className="w-full flex justify-center">
-			<img src="/internmate/im-data-management.png" className="rounded-lg object-fit max-h-[540px]" onClick={e => e.preventDefault()} />
-		</div>
+		<SlideImage src="/internmate/im-home.png" desc="메인 화면" />,
+		<SlideImage src="/internmate/im-my-career.gif" desc="내 커리어 관리" />,
+		<SlideImage src="/internmate/im-recruitment-details.gif" desc="채용 상세 페이지" />,
+		<SlideImage src="/internmate/im-data-management.png" desc="개인 데이터 관리" />
 	],
 };
-
-
 
 const portfolioData = {
 	fsComEsg,
