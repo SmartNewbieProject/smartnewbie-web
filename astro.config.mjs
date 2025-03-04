@@ -5,9 +5,12 @@ import svgr from "vite-plugin-svgr";
 import react from '@astrojs/react';
 import tailwindcss from '@tailwindcss/vite';
 
+import netlify from '@astrojs/netlify';
+
 // https://astro.build/config
 export default defineConfig({
   integrations: [react()],
+
   vite: {
     server: {
       allowedHosts: ['galaxy4276.asuscomm.com'],
@@ -32,4 +35,6 @@ export default defineConfig({
       }),
     ],
   },
+
+  adapter: netlify(),
 });

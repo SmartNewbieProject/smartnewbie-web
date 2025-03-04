@@ -23,7 +23,7 @@ export default function Header() {
 
 				<nav className="flex">
 					<ul className="flex gap-[32px] items-center">
-						<li className="hidden md:block relative group cursor-pointer">
+						{/* <li className="hidden md:block relative group cursor-pointer">
 							<span className="relative text-slate-700">
 								회사소개
 								<span className="absolute -bottom-[4px] left-0 w-0 h-[2px] bg-[#0167FF] transition-all duration-300 group-hover:w-full"></span>
@@ -40,7 +40,7 @@ export default function Header() {
 								블로그
 								<span className="absolute -bottom-[4px] left-0 w-0 h-[2px] bg-[#0167FF] transition-all duration-300 group-hover:w-full"></span>
 							</span>
-						</li>
+						</li> */}
 						<li>
 							<Button onClick={handleScrollToContact}>
 								문의하기
