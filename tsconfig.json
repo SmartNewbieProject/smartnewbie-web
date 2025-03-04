@@ -18,6 +18,7 @@
       "@features/*": ["./src/react/features/*"],
       "@shared/*": ["./src/react/shared/*"],
       "@pages/*": ["./src/react/pages/*"]
-    }
+    },
+    "types": ["react/jsx-runtime"]
   }
 }
