@@ -10,7 +10,7 @@ export default function Panel({ title, skills, rules, features, description, bac
 	return (
 		<article
 			className={cn([
-				'w-full p-[38px] relative min-h-[680px] md:h-fit rounded-none md:rounded-xl',
+				'w-full p-[38px] relative min-h-[680px] h-full md:h-fit rounded-none md:rounded-xl',
 				background,
 			])}
 		>
@@ -51,7 +51,7 @@ export default function Panel({ title, skills, rules, features, description, bac
 					</div>
 				</nav>
 
-				<nav className="max-w-[620px] w-full h-hit drop-shadow-xl">
+				<nav className="max-w-[620px] w-full h-full drop-shadow-xl">
 					<Slider
 						hideControl
 						panels={slides}
