@@ -23,6 +23,7 @@ export default function Slider({ panels, nested, modules, hideControl = false, .
 			loop
 			{...swiperProps}
 		>
+			{!hideControl && <Control />}
 			{panels.map((panel, i) => (
 				<SwiperSlide key={i} className={cn([
 					'w-full',
@@ -30,7 +31,6 @@ export default function Slider({ panels, nested, modules, hideControl = false, .
 					{panel}
 				</SwiperSlide>
 			))}
-			{!hideControl && <Control />}
 		</Swiper>
 	);
 }

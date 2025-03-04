@@ -11,7 +11,7 @@ export default function Header() {
 	};
 
 	return (
-			<header className="px-[40px] h-[60px] bg-white border-b border-gray-100 flex items-center justify-between">
+			<header className="px-2 md:px-[40px] h-[60px] bg-white border-b border-gray-100 flex items-center justify-between">
 				<nav>
 					<a href="/" className="flex gap-x-3 items-center">
 						<Icons.Symbol />

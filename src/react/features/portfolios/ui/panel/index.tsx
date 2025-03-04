@@ -71,18 +71,3 @@ export default function Panel({ title, skills, rules, features, description, bac
 		</article>
 	);
 }
-
-const panels = [
-	<div>
-		<img src="/esg-main.png" className="rounded-lg object-fit" onClick={e => e.preventDefault()} />
-	</div>,
-	<div>
-		<img src="/esg-main.png" className="rounded-lg object-fit" onClick={e => e.preventDefault()} />
-	</div>,
-	<div>
-		<img src="/esg-main.png" className="rounded-lg object-fit" onClick={e => e.preventDefault()} />
-	</div>,
-	<div>
-		<img src="/esg-main.png" className="rounded-lg object-fit" onClick={e => e.preventDefault()} />
-	</div>,
-];

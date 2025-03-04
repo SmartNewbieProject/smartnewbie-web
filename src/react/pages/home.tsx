@@ -12,19 +12,13 @@ function TopContent() {
 					<Banner />
 					<HomePart.Service />
 				</div>
-
-
-
-				{/*<div className="mt-[36px] max-w-[960px] flex flex-col gap-y-[128px] w-full">*/}
-				{/*	<Contact />*/}
-				{/*</div>*/}
 			</Layout>
 	);
 }
 
 const PortfolioComp = () => (
 	<Layout header={false}>
-		<div className="max-w-[960px] mt-[128px] flex flex-col gap-y-[128px] w-full">
+		<div className="px-4 md:px-0max-w-[960px] mt-[128px] flex flex-col gap-y-[128px] w-full">
 			<span className="text-3xl text-slate-800 font-bold">포트폴리오</span>
 		</div>
 		<section className="px-4 md:px-0" id="portfolio">

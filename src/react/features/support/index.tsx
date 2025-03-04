@@ -1,13 +1,14 @@
 import { Card, Icons, Marquee } from "@shared/ui";
+import Layout from "../layout";
 
 export default function Support() {
 	return (
-		<section className="w-full flex justify-center my-[128px]">
-			<div className="max-w-[960px] flex justify-center flex-col">
+			<section className="px-2 md:px-0 w-full flex justify-center my-[128px]">
+				<div className="w-full md:max-w-[960px] flex justify-center flex-col">
 				<span className="text-3xl text-slate-800 font-bold mb-[36px]">스마트뉴비와 함께한 파트너</span>
 
 				<Marquee
-					className="[--duration:20s]  w-full"
+					className="[--duration:20s] w-full"
 				>
 					<Card className="w-[152px] h-[152px]">
 						<img
@@ -55,7 +56,7 @@ export default function Support() {
 
 				<Marquee
 					reverse
-					className="[--duration:25s]  w-full"
+					className="[--duration:25s] w-full"
 				>
 					<Card className="w-[152px] h-[152px]">
 						<img
@@ -102,7 +103,5 @@ export default function Support() {
 				</Marquee>
 			</div>
 		</section>
-
-
 	)
 }
