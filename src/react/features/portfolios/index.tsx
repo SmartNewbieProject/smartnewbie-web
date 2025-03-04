@@ -21,6 +21,7 @@ export type PanelMetadata = {
 
 const panels = [
 	<Panel {...portfolioData.internMate} />,
+	<Panel {...portfolioData.treedStudio} />,
 	<Panel {...portfolioData.fsComEsg} />,
 ];
 

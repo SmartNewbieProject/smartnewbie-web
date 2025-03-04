@@ -13,6 +13,7 @@ import Nginx from '@/assets/stack/devicon_nginx.svg?react';
 import RDS from '@/assets/stack/logos_aws-rds.svg?react';
 import AWS from '@/assets/stack/logos_aws.svg?react';
 import Hbu from '@/assets/hbu.svg?react';
+import TreedStudio from '@/assets/logo_treed.svg?react';
 
 const Icons = {
 	Symbol,
@@ -30,6 +31,7 @@ const Icons = {
 	RDS,
 	AWS,
 	Hbu,
+	TreedStudio,
 };
 
 export default Icons;
