@@ -14,7 +14,7 @@ import RDS from '@/assets/stack/logos_aws-rds.svg?react';
 import AWS from '@/assets/stack/logos_aws.svg?react';
 import Hbu from '@/assets/hbu.svg?react';
 import TreedStudio from '@/assets/stack/logos_nodejs.svg?react';
-import Nodejs from '@/assets/logo_treed.svg?react';
+import Nodejs from '@/assets/stack/logos_nodejs.svg?react';
 import MongoDB from '@/assets/stack/devicon_mongodb-wordmark.svg?react';
 import Express from '@/assets/stack/simple-icons_express.svg?react';
 
