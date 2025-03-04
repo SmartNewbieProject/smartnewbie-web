@@ -1,6 +1,64 @@
 import { Icons } from "@shared/ui";
 import type { PanelMetadata } from "@features/portfolios";
 
+const easyJoin: PanelMetadata = {
+	title: (
+		<div className="flex gap-x-1 items-center" onDrag={e => e.preventDefault()}>
+			<img src="/easyjoin/favicon.ico" width={32} height={32} onClick={e => e.preventDefault()} />
+			<span className="text-xl font-semibold text-slate-900">EasyJoin - 비대면 전자계약 서비스</span>
+		</div>
+	),
+	description: '부동산 전자계약 비대면 지원 서비스입니다. 서명, 직인, 첨부파일 등 전자계약에 필요한 다양한 기능을 제공하며 사전 계약서 템플릿을 작성해두고 언제든 쉽게 업체와 고객 간 전자계약서 작성을 진행할 수 있게 도와줍니다.',
+	darkMode: false,
+	skills: [
+		{ element: <Icons.Nodejs />, name: 'Node.js', darkMode: false },
+		{ element: <Icons.React />, name: 'React 18+', darkMode: false },
+		{ element: <Icons.ReactRouter />, name: 'Router', darkMode: false },
+		{ element: <Icons.MongoDB />, name: 'MongoDB', darkMode: false },
+		{ element: <Icons.Express />, name: 'Express', darkMode: false },
+		{ element: <Icons.Nginx />, name: 'Nginx', darkMode: false },
+		{ element: <Icons.TanstackQuery />, name: 'Tanstack Query', darkMode: false },
+	],
+	background: 'bg-white box-shadow-sm border border-gray-50',
+	features: ['본인인증(Nice)', '기업/사용자용 랜딩', '비대면 전자계약 기능', '대용량 이미지 처리', '전자계약 문서 관리', '계약 인증서 자동 생성', '전자계약용 파일업로드 용 모바일앱 개발'],
+	rules: ['기능명세', '서비스 기획', '개발', '프로젝트 관리'],
+	slides: [
+		<div className="w-full flex justify-center">
+		<img src="/easyjoin/bus-home.png" className="rounded-lg object-fit max-h-[540px]" onClick={e => e.preventDefault()} />
+</div>,
+		<div className="w-full flex justify-center">
+			<img src="/easyjoin/template.png" className="rounded-lg object-fit max-h-[540px]" onClick={e => e.preventDefault()} />
+		</div>,
+		<div className="w-full flex justify-center">
+			<img src="/easyjoin/template-w.png" className="rounded-lg object-fit max-h-[540px]" onClick={e => e.preventDefault()} />
+		</div>,
+		<div className="w-full flex justify-center">
+			<img src="/easyjoin/drawing.png" className="rounded-lg object-fit max-h-[540px]" onClick={e => e.preventDefault()} />
+		</div>,
+		<div className="w-full flex justify-center">
+			<img src="/easyjoin/comp-docs.png" className="rounded-lg object-fit max-h-[540px]" onClick={e => e.preventDefault()} />
+		</div>,
+		<div className="w-full flex justify-center">
+			<img src="/easyjoin/progress.png" className="rounded-lg object-fit max-h-[540px]" onClick={e => e.preventDefault()} />
+		</div>,
+		<div className="w-full flex justify-center">
+			<img src="/easyjoin/sign.png" className="rounded-lg object-fit max-h-[540px]" onClick={e => e.preventDefault()} />
+		</div>,
+			<div className="w-full flex justify-center">
+				<img src="/easyjoin/sign-management.png" className="rounded-lg object-fit max-h-[540px]" onClick={e => e.preventDefault()} />
+		</div>,
+			<div className="w-full flex justify-center">
+					<img src="/easyjoin/client-system.png" className="rounded-lg object-fit max-h-[540px]" onClick={e => e.preventDefault()} />
+			</div>,
+				<div className="w-full flex justify-center">
+					<img src="/easyjoin/my-info.png" className="rounded-lg object-fit max-h-[540px]" onClick={e => e.preventDefault()} />
+				</div>,
+				<div className="w-full flex justify-center">
+					<img src="/easyjoin/required-attachment.png" className="rounded-lg object-fit max-h-[540px]" onClick={e => e.preventDefault()} />
+				</div>,
+	],
+};
+
 const treedStudio: PanelMetadata = {
 	title: (
 		<div className="flex gap-x-1 items-center" onDrag={e => e.preventDefault()}>
@@ -15,13 +73,13 @@ const treedStudio: PanelMetadata = {
 		{ element: <Icons.React />, name: 'React 18+', darkMode: false },
 		{ element: <Icons.ReactRouter />, name: 'Router', darkMode: false },
 		{ element: <Icons.MariaDB />, name: 'MariaDB', darkMode: false },
-		{ element: <Icons.Nginx />, name: 'TailwindCSS', darkMode: false },
+		{ element: <Icons.Nginx />, name: 'Nginx', darkMode: false },
 		{ element: <Icons.Hibernate />, name: 'Hibernate', darkMode: false },
 		{ element: <Icons.TanstackQuery />, name: 'Tanstack Query', darkMode: false },
 	],
 	background: 'bg-white box-shadow-sm border border-gray-50',
 	features: ['모두싸인 연동(전자계약)', '결제(NicePay)', '캔버스 기반 이미지 탐색', '어드민', '회원 관리', 'RBAC 권한 관리', '대용량 이미지 압축', '실시간 상태 변경(ws)'],
-	rules: ['기능명세', '서비스 기획', '디자인', '개발'],
+	rules: ['개발', '자동화 서버 운영', '프로젝트 관리'],
 	slides: [
 		<div className="w-full flex justify-center">
 			<img src="/treed/treed-admin-user-management.png" className="rounded-lg object-fit max-h-[540px]" onClick={e => e.preventDefault()} />
@@ -113,6 +171,7 @@ const portfolioData = {
 	fsComEsg,
 	internMate,
 	treedStudio,
+	easyJoin
 };
 
 export default portfolioData;
